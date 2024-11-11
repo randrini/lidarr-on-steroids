@@ -1,8 +1,8 @@
 # [lidarr-on-steroids](https://github.com/youegraillot/lidarr-on-steroids/)
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/youegraillot/lidarr-on-steroids?style=for-the-badge&logo=github)](https://github.com/youegraillot/lidarr-on-steroids)
-[![Latest tag](https://img.shields.io/docker/v/youegraillot/lidarr-on-steroids?style=for-the-badge&logo=docker)](https://hub.docker.com/r/youegraillot/lidarr-on-steroids)
-[![Docker pulls](https://img.shields.io/docker/pulls/youegraillot/lidarr-on-steroids?style=for-the-badge&logo=docker)](https://hub.docker.com/r/youegraillot/lidarr-on-steroids)
+[![GitHub last commit](https://img.shields.io/github/last-commit/randrini/lidarr-on-steroids?style=for-the-badge&logo=github)](https://github.com/randrini/lidarr-on-steroids)
+[![Latest tag](https://img.shields.io/docker/v/randrini/lidarr-on-steroids?style=for-the-badge&logo=docker)](https://hub.docker.com/r/randrini/lidarr-on-steroids)
+[![Docker pulls](https://img.shields.io/docker/pulls/rnandrini/lidarr-on-steroids?style=for-the-badge&logo=docker)](https://hub.docker.com/r/randrini/lidarr-on-steroids)
 
 This repository bundles a modded version of Lidarr and Deemix into a docker image featuring :
   - Native Deemix integration as an indexer and downloader for Lidarr
@@ -12,7 +12,7 @@ This repository bundles a modded version of Lidarr and Deemix into a docker imag
 
 This allows an easy deployment, with the advantage of having a direct control over Deemix indexing and downloader capacities into Lidarr :
 
-!["Lidarr indexers"](https://github.com/youegraillot/lidarr-on-steroids/raw/main/.assets/lidarr-indexers.png "Lidarr indexers")
+!["Lidarr indexers"](https://github.com/randrini/lidarr-on-steroids/raw/main/.assets/lidarr-indexers.png "Lidarr indexers")
 
 ## Usage
 
@@ -44,7 +44,7 @@ docker run \
   -v <path>:/downloads \
   -v <path>:/music \
   --restart unless-stopped \
- youegraillot/lidarr-on-steroids
+ randrini/lidarr-on-steroids
 ```
 
 ### Docker Compose
@@ -53,7 +53,7 @@ docker run \
 version: "3"
 services:
   lidarr:
-    image: youegraillot/lidarr-on-steroids
+    image: randrini/lidarr-on-steroids
     restart: unless-stopped
     ports:
       - "8686:8686" # Lidarr web UI
@@ -89,7 +89,7 @@ To enable conversion on Lidarr import, create a new Connection to a Custom Scrip
 
 In `AUTOCONFIG`, if `FLAC2CUSTOM_ARGS` is set and no other connection to flac2* is found, this step done for you :
 
-!["Lidarr custom script settings"](https://github.com/youegraillot/lidarr-on-steroids/raw/main/.assets/lidarr-custom-script.png "Lidarr custom script settings")
+!["Lidarr custom script settings"](https://github.com/randrini/lidarr-on-steroids/raw/main/.assets/lidarr-custom-script.png "Lidarr custom script settings")
 
 ## Acknowledgment
 
