@@ -24,12 +24,6 @@ jobs:
         cd lidarr-flac2mp3
         git checkout f755bb2c7e2922244f02287edb03d0484e0a5f05
 
-    # Debugging step: List repository contents
-    - name: Debugging: List lidarr-flac2mp3 contents
-      run: |
-        echo "Listing lidarr-flac2mp3 directory contents:"
-        ls -R lidarr-flac2mp3
-
     # Set up QEMU for cross-platform builds
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
