@@ -3,10 +3,10 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-    - "test-optimized-dockerfile" # Only trigger on the test branch
+      - "test-optimized-dockerfile"
   pull_request:
     branches:
-    - "test-optimized-dockerfile"
+      - "test-optimized-dockerfile"
 
 jobs:
   build-and-push:
@@ -16,6 +16,13 @@ jobs:
     # Checkout the repository
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    # Clone lidarr-flac2mp3 repository
+    - name: Clone lidarr-flac2mp3
+      run: |
+        git clone https://github.com/youegraillot/lidarr-flac2mp3.git lidarr-flac2mp3
+        cd lidarr-flac2mp3
+        git checkout f755bb2c7e2922244f02287edb03d0484e0a5f05
 
     # Set up QEMU for cross-platform builds
     - name: Set up QEMU
