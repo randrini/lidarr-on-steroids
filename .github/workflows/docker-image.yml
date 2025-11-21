@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - name: Clone lidarr-flac2mp3 at specific commit
       run: |
         git clone https://github.com/youegraillot/lidarr-flac2mp3.git lidarr-flac2mp3
